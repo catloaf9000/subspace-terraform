@@ -14,7 +14,7 @@ resource "aws_key_pair" "terraform_key" {
 resource "aws_security_group" "subspace_sg" {
   name        = "subspace_sg"
   description = "Security group for Subspace EC2 instance"
-  vpc_id = aws_vpc.subspace_vpc.id
+  vpc_id      = aws_vpc.subspace_vpc.id
 
   # Inbound rules
   ingress {
@@ -60,4 +60,3 @@ resource "aws_security_group" "subspace_sg" {
     Terraform   = "true"
   }
 }
-
